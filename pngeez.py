@@ -6,12 +6,14 @@ from pygame.locals import *
 pygame.init()
 sys.argv.pop(0)
 
-icon = pygame.image.load("/Program Files/pngeez/icon.png")
+if os.name == "nt":
+    icon = pygame.image.load("/Program Files/pngeez/icon.png")
 title = "PNGeez"
 pygame.display.set_icon(icon)
 
 if len(sys.argv) == 0:
-    img = pygame.image.load("/Program Files/pngeez/nothing.png")
+    if os.name == "nt":
+        img = pygame.image.load("/Program Files/pngeez/nothing.png")
 else:
     img = pygame.image.load(sys.argv[0])
     title = sys.argv[0]

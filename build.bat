@@ -1,5 +1,5 @@
 pyinstaller --optimize 2 --noconfirm -w --icon=icon.ico .\pngeez.py
-Copy dist\pngeez\pngeez pngeez\
+Copy dist\pngeez\pngeez.exe pngeez\
 mkdir pngeez\_internal
 mkdir pngeez\_internal\pygame
 Copy dist\pngeez\_internal\* pngeez\_internal\
